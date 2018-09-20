@@ -1,0 +1,7 @@
+$include-padding-breakpoint: 950px !default;
+
+@mixin medium_width {
+    @media screen and (min-width: $include-padding-breakpoint) {
+        @content;
+    }
+}

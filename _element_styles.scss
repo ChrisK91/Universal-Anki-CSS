@@ -1,0 +1,96 @@
+$list-margin: 1em !default;
+$large-list-margin: 2.5em !default;
+$gradient-background: linear-gradient(to top, lighten($background, 2%) 0%, lighten($background-gradient-end, 2%) 100%) !default;
+
+ul, ol, dl {
+    text-align: left;
+    margin-left: $list-margin;
+    margin-right: $list-margin;
+
+    @include medium_width() {
+        margin-left: $large-list-margin;
+        margin-right: $large-list-margin;
+      }
+}
+
+code, pre {
+    display: block;
+    font-family: $monospace;
+    text-align: left;
+
+    background-image: $gradient-background;
+}
+
+pre {
+    padding: 1.2em;
+    border: $lighter-color 1px solid;
+}
+
+kbd {
+    border: $lighter-color 1px solid;
+    border-radius: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-image: $gradient-background;
+}
+
+.mute {
+    color: $lighter-color;
+}
+
+blockquote {
+    display: block;
+    text-align: left;
+    border-left: $lighter-color 2px solid;
+    padding-left: 3em;
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+hr {
+    color: transparent;
+    border-color: $lighter-color;
+    border: 0px;
+    border-bottom: 1px solid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+    border-bottom: $lighter-color 1px solid;
+    margin-top: 1.7em;
+    margin-bottom: 1em;
+    font-weight: 350;
+    font-family: $header-fonts;
+}
+
+abbr {
+    text-decoration: none;
+    border-bottom: $lighter-color dashed 1px;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 2.2em;
+}
+
+h2 {
+    font-weight: 200;
+    font-size: 2.0em;
+}
+
+h3 {
+    font-weight: 350;
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.3em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1.1em;
+}

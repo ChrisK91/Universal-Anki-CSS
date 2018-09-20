@@ -1,0 +1,138 @@
+body {
+  background-color: #f8f8f8;
+  background-image: linear-gradient(to top, #f8f8f8 0%, #f0f0f0 100%);
+  background-attachment: fixed;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  color: #111111;
+  text-align: center;
+  padding-top: 2.5em; }
+  @media screen and (min-width: 950px) {
+    body {
+      padding-left: 15%;
+      padding-right: 15%; } }
+  body ul, body ol, body dl {
+    text-align: left;
+    margin-left: 1em;
+    margin-right: 1em; }
+    @media screen and (min-width: 950px) {
+      body ul, body ol, body dl {
+        margin-left: 2.5em;
+        margin-right: 2.5em; } }
+  body code, body pre {
+    display: block;
+    font-family: Consolas, monospace;
+    text-align: left;
+    background-image: linear-gradient(to top, #fdfdfd 0%, whitesmoke 100%); }
+  body pre {
+    padding: 1.2em;
+    border: #aaaaaa 1px solid; }
+  body kbd {
+    border: #aaaaaa 1px solid;
+    border-radius: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-image: linear-gradient(to top, #fdfdfd 0%, whitesmoke 100%); }
+  body .mute {
+    color: #aaaaaa; }
+  body blockquote {
+    display: block;
+    text-align: left;
+    border-left: #aaaaaa 2px solid;
+    padding-left: 3em;
+    margin-left: 4em;
+    margin-right: 4em; }
+  body hr {
+    color: transparent;
+    border-color: #aaaaaa;
+    border: 0px;
+    border-bottom: 1px solid; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    text-align: left;
+    border-bottom: #aaaaaa 1px solid;
+    margin-top: 1.7em;
+    margin-bottom: 1em;
+    font-weight: 350;
+    font-family: "Segoe UI", Helvetica, sans-serif; }
+  body abbr {
+    text-decoration: none;
+    border-bottom: #aaaaaa dashed 1px; }
+  body h1 {
+    font-weight: 100;
+    font-size: 2.2em; }
+  body h2 {
+    font-weight: 200;
+    font-size: 2.0em; }
+  body h3 {
+    font-weight: 350;
+    font-size: 1.5em; }
+  body h4 {
+    font-size: 1.3em; }
+  body h5 {
+    font-size: 1.2em; }
+  body h6 {
+    font-size: 1.1em; }
+
+body.night_mode {
+  background-image: linear-gradient(to top, #070707 0%, #0f0f0f 100%); }
+  body.night_mode ul, body.night_mode ol, body.night_mode dl {
+    text-align: left;
+    margin-left: 1em;
+    margin-right: 1em; }
+    @media screen and (min-width: 950px) {
+      body.night_mode ul, body.night_mode ol, body.night_mode dl {
+        margin-left: 2.5em;
+        margin-right: 2.5em; } }
+  body.night_mode code, body.night_mode pre {
+    display: block;
+    font-family: Consolas, monospace;
+    text-align: left;
+    background-image: linear-gradient(to top, #070707 0%, #0f0f0f 100%); }
+  body.night_mode pre {
+    padding: 1.2em;
+    border: #555555 1px solid; }
+  body.night_mode kbd {
+    border: #555555 1px solid;
+    border-radius: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-image: linear-gradient(to top, #070707 0%, #0f0f0f 100%); }
+  body.night_mode .mute {
+    color: #555555; }
+  body.night_mode blockquote {
+    display: block;
+    text-align: left;
+    border-left: #555555 2px solid;
+    padding-left: 3em;
+    margin-left: 4em;
+    margin-right: 4em; }
+  body.night_mode hr {
+    color: transparent;
+    border-color: #555555;
+    border: 0px;
+    border-bottom: 1px solid; }
+  body.night_mode h1, body.night_mode h2, body.night_mode h3, body.night_mode h4, body.night_mode h5, body.night_mode h6 {
+    text-align: left;
+    border-bottom: #555555 1px solid;
+    margin-top: 1.7em;
+    margin-bottom: 1em;
+    font-weight: 350;
+    font-family: "Segoe UI", Helvetica, sans-serif; }
+  body.night_mode abbr {
+    text-decoration: none;
+    border-bottom: #555555 dashed 1px; }
+  body.night_mode h1 {
+    font-weight: 100;
+    font-size: 2.2em; }
+  body.night_mode h2 {
+    font-weight: 200;
+    font-size: 2.0em; }
+  body.night_mode h3 {
+    font-weight: 350;
+    font-size: 1.5em; }
+  body.night_mode h4 {
+    font-size: 1.3em; }
+  body.night_mode h5 {
+    font-size: 1.2em; }
+  body.night_mode h6 {
+    font-size: 1.1em; }

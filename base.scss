@@ -1,0 +1,51 @@
+$background: #f8f8f8 !default;
+$background-gradient-end: #f0f0f0 !default;
+
+$background-image: linear-gradient(to top, $background 0%, $background-gradient-end 100%);
+$background-image-night: linear-gradient(to top, invert($background) 0%, invert($background-gradient-end) 100%);
+
+$darker-background: darken($background, 2%) !default;
+
+$font-stack: Verdana, Arial, Helvetica, sans-serif !default;
+$header-fonts: "Segoe UI", Helvetica, sans-serif !default;
+
+$monospace: Consolas, monospace !default;
+
+$font-color: #111111 !default;
+$lighter-color: lighten($font-color, 60%) !default;
+
+$font-size-base: 1.2em !default;
+
+$padding-amount: 15% !default;
+
+@import 'width_mixins';
+
+body {
+    background-color: $background;
+    background-image: $background-image;
+    background-attachment: fixed;
+
+    font-family: $font-stack;
+    font-size: $font-size-base;
+    color: $font-color;
+
+    text-align: center;
+
+    @include medium_width() {
+        padding-left: $padding-amount;
+        padding-right: $padding-amount;
+      }
+
+    padding-top: 2.5em;
+
+    @import 'element_styles';
+}
+
+body.night_mode {
+    background-image: $background-image-night;
+
+    $gradient-background: $background-image-night;
+
+    $lighter-color: invert($lighter-color);
+    @import 'element_styles';
+}

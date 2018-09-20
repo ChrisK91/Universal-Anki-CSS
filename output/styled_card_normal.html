@@ -1,0 +1,70 @@
+<html class=" webkit safari win js">
+<head>
+<style>
+button {
+font-weight: normal;
+}
+
+hr { background-color:#ccc; margin: 1em; }
+body { margin:1.5em; }
+img { max-width: 95%; max-height: 95%; }
+.marked { position:fixed; right: 7px; top: 7px; display: none; }
+#typeans { width: 100%; }
+.typeGood { background: #0f0; }
+.typeBad { background: #f00; }
+.typeMissed { background: #ccc; }
+</style>
+</head>
+<body class="card card1">
+<img src="qrc:/icons/rating.png" id="star" class="marked" draggable="false" style="display: none; ">
+<div id="qa"><style>@import url("_base.css");</style>This is a styled card
+
+<hr id="answer">
+
+On its back there is: <b>bold</b>, <i>italic,</i>&nbsp;and <u>underlined</u> text.<div><br></div><div>Text with <sup>superscript</sup>&nbsp;and with <sub>subscript</sub>.</div><div><br></div><div><pre class="myCodeClass">There is also some Code
+with line breaks
+inserted with Shift + Enter
+</pre></div><div><br></div><div><ul><li>we have lists</li><li>with multiple points</li><ul><li>and Nesting</li></ul></ul><div><hr><ol type="1" start="1"><li>Numbered lists</li><li>With several points&nbsp;</li><ol><li>and indentation</li></ol></ol><div><dl><dt><b>Definition lists</b></dt><dd>which are here to show definitions</dd><dt><b>Test</b></dt><dd>something something</dd></dl>And a Keyboard button <kbd>Enter</kbd></div></div></div><div></div><div>Finally:&nbsp;<a href="example.com">A Link</a></div><blockquote>And a blockquote</blockquote>An&nbsp;<abbr title="abbreviation">abbr.</abbr>&nbsp;:<div><br></div><div><h1>H1</h1></div><div><h2>H2</h2></div><div><h3>H3</h3></div><div><h4>H4</h4></div><div><h5>H5</h5></div><div><h6>H6</h6></div></div>
+<script>
+var ankiPlatform = "desktop";
+var typeans;
+function _updateQA (q, answerMode, klass) {
+    $("#qa").html(q);
+    typeans = document.getElementById("typeans");
+    if (typeans) {
+        typeans.focus();
+    }
+    if (answerMode) {
+        var e = $("#answer");
+        if (e[0]) { e[0].scrollIntoView(); }
+    } else {
+        window.scrollTo(0, 0);
+    }
+    if (klass) {
+        document.body.className = klass;
+    }
+    // don't allow drags of images, which cause them to be deleted
+    $("img").attr("draggable", false);
+};
+
+function _toggleStar (show) {
+    if (show) {
+        $(".marked").show();
+    } else {
+        $(".marked").hide();
+    }
+}
+
+function _getTypedText () {
+    if (typeans) {
+        py.link("typeans:"+typeans.value);
+    }
+};
+function _typeAnsPress() {
+    if (window.event.keyCode === 13) {
+        py.link("ansHack");
+    }
+}
+</script>
+</body>
+</html>
