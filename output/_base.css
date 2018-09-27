@@ -1,3 +1,33 @@
+/*
+ * $background:
+ * starting color of the background gradient, also used as fallback color as static color
+ * 
+ * $background-gradient-end:
+ * end color of the background gradient
+ */
+/*
+ * font stacks for normal, header and monospace fonts
+ */
+/*
+ * $font-color: 
+ * default color for all text
+ *
+ * $lighter-color:
+ * color for borders and light text
+ *
+ * $cloze-color:
+ * color for clozed text, is redefined for nightmode below
+ */
+/*
+ * $font-base-size:
+ * default font size
+ *
+ * $padding-amount:
+ * padding for "center-column" on large screens
+ * 
+ * see file "_width_mixins.scss" or set "$include-padding-breakpoint"
+ * to change the width at which padding should be added
+ */
 body {
   background-color: #f8f8f8;
   background-image: linear-gradient(to top, #f8f8f8 0%, #f0f0f0 100%);
@@ -19,10 +49,24 @@ body {
       body ul, body ol, body dl {
         margin-left: 2.5em;
         margin-right: 2.5em; } }
+  body span.cloze {
+    font-weight: bold;
+    color: #1d1dd1; }
   body code, body pre {
     display: block;
     font-family: Consolas, monospace;
     text-align: left;
+    background-image: linear-gradient(to top, #fdfdfd 0%, whitesmoke 100%); }
+  body code#typeans {
+    text-align: center;
+    margin: 0.4em 0;
+    border: #aaaaaa 1px solid;
+    border-radius: 3px; }
+  body div.hint {
+    padding: 4px 0;
+    border: #aaaaaa 1px solid;
+    border-radius: 3px;
+    margin: 0.4em 15%;
     background-image: linear-gradient(to top, #fdfdfd 0%, whitesmoke 100%); }
   body pre {
     padding: 1.2em;
@@ -83,10 +127,24 @@ body.night_mode {
       body.night_mode ul, body.night_mode ol, body.night_mode dl {
         margin-left: 2.5em;
         margin-right: 2.5em; } }
+  body.night_mode span.cloze {
+    font-weight: bold;
+    color: #ddac26 !important; }
   body.night_mode code, body.night_mode pre {
     display: block;
     font-family: Consolas, monospace;
     text-align: left;
+    background-image: linear-gradient(to top, #070707 0%, #0f0f0f 100%); }
+  body.night_mode code#typeans {
+    text-align: center;
+    margin: 0.4em 0;
+    border: #555555 1px solid;
+    border-radius: 3px; }
+  body.night_mode div.hint {
+    padding: 4px 0;
+    border: #555555 1px solid;
+    border-radius: 3px;
+    margin: 0.4em 15%;
     background-image: linear-gradient(to top, #070707 0%, #0f0f0f 100%); }
   body.night_mode pre {
     padding: 1.2em;

@@ -2,6 +2,8 @@ $list-margin: 1em !default;
 $large-list-margin: 2.5em !default;
 $gradient-background: linear-gradient(to top, lighten($background, 2%) 0%, lighten($background-gradient-end, 2%) 100%) !default;
 
+$cloze-color: #1d1dd1 !default;
+
 ul, ol, dl {
     text-align: left;
     margin-left: $list-margin;
@@ -13,11 +15,31 @@ ul, ol, dl {
       }
 }
 
+span.cloze {
+    font-weight: bold;
+    color: $cloze-color;
+}
+
 code, pre {
     display: block;
     font-family: $monospace;
     text-align: left;
 
+    background-image: $gradient-background;
+}
+
+code#typeans {
+    text-align: center;
+    margin: 0.4em 0;
+    border: $lighter-color 1px solid;
+    border-radius: 3px;
+}
+
+div.hint {
+    padding: 4px 0;
+    border: $lighter-color 1px solid;
+    border-radius: 3px;
+    margin: 0.4em 15%;
     background-image: $gradient-background;
 }
 

@@ -1,22 +1,52 @@
+/*
+ * $background:
+ * starting color of the background gradient, also used as fallback color as static color
+ * 
+ * $background-gradient-end:
+ * end color of the background gradient
+ */
+
 $background: #f8f8f8 !default;
 $background-gradient-end: #f0f0f0 !default;
 
 $background-image: linear-gradient(to top, $background 0%, $background-gradient-end 100%);
 $background-image-night: linear-gradient(to top, invert($background) 0%, invert($background-gradient-end) 100%);
 
-$darker-background: darken($background, 2%) !default;
-
+/*
+ * font stacks for normal, header and monospace fonts
+ */
 $font-stack: Verdana, Arial, Helvetica, sans-serif !default;
 $header-fonts: "Segoe UI", Helvetica, sans-serif !default;
 
 $monospace: Consolas, monospace !default;
 
+/*
+ * $font-color: 
+ * default color for all text
+ *
+ * $lighter-color:
+ * color for borders and light text
+ *
+ * $cloze-color:
+ * color for clozed text, is redefined for nightmode below
+ */
 $font-color: #111111 !default;
-$lighter-color: lighten($font-color, 60%) !default;
+$lighter-color: lighten($font-color, 60%) !default; //TODO: separate in element color and text color?
+$cloze-color: #1d1dd1 !default;
 
+/*
+ * $font-base-size:
+ * default font size
+ *
+ * $padding-amount:
+ * padding for "center-column" on large screens
+ * 
+ * see file "_width_mixins.scss" or set "$include-padding-breakpoint"
+ * to change the width at which padding should be added
+ */
 $font-size-base: 1.2em !default;
-
 $padding-amount: 15% !default;
+
 
 @import 'width_mixins';
 
@@ -47,5 +77,7 @@ body.night_mode {
     $gradient-background: $background-image-night;
 
     $lighter-color: invert($lighter-color);
+
+    $cloze-color: #ddac26 !important; // !important is needed to override the night-mode color
     @import 'element_styles';
 }

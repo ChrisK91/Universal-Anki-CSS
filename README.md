@@ -22,9 +22,17 @@ A universal Anki CSS file, to stylize your cards. The built-in template in Anki 
 
 - For lists, centering is not easy without wrapping them inside a container. Therefore, they are left aligned
 
-## Planned features, help, and feature requests:
+## Planned features, help, and feature requests
 
 Please see: https://chrisk91.me/2018/09/19/Basic-CSS-Template-for-Anki.html
 
-## License:
+## License
+
 The code is licensed under the MIT license. Fell free to share it, modify it or redistribute it.
+
+## Changelog
+
+ - September 2018:
+    - Added styling for clozed cards
+    - Added styling for built-in hints
+    - Added styling for type: cards

@@ -1,0 +1,72 @@
+<html class=" webkit safari win js">
+<head>
+<style>
+button {
+font-weight: normal;
+}
+
+hr { background-color:#ccc; margin: 1em; }
+body { margin:1.5em; }
+img { max-width: 95%; max-height: 95%; }
+.marked { position:fixed; right: 7px; top: 7px; display: none; }
+#typeans { width: 100%; }
+.typeGood { background: #0f0; }
+.typeBad { background: #f00; }
+.typeMissed { background: #ccc; }
+</style>
+</head>
+<body class="card card1">
+<img src="qrc:/icons/rating.png" id="star" class="marked" draggable="false" style="display: none; ">
+<div id="qa"><style>@import url("_base.css");</style>Question
+
+
+<a class="hint" href="#" onclick="this.style.display='none';document.getElementById('hint120826648').style.display='block';return false;" style="display: none; ">
+Show Hint</a><div id="hint120826648" class="hint" style="display: block; ">Hint text</div>
+
+
+<hr id="answer">
+
+Answer</div>
+<script>
+var ankiPlatform = "desktop";
+var typeans;
+function _updateQA (q, answerMode, klass) {
+    $("#qa").html(q);
+    typeans = document.getElementById("typeans");
+    if (typeans) {
+        typeans.focus();
+    }
+    if (answerMode) {
+        var e = $("#answer");
+        if (e[0]) { e[0].scrollIntoView(); }
+    } else {
+        window.scrollTo(0, 0);
+    }
+    if (klass) {
+        document.body.className = klass;
+    }
+    // don't allow drags of images, which cause them to be deleted
+    $("img").attr("draggable", false);
+};
+
+function _toggleStar (show) {
+    if (show) {
+        $(".marked").show();
+    } else {
+        $(".marked").hide();
+    }
+}
+
+function _getTypedText () {
+    if (typeans) {
+        py.link("typeans:"+typeans.value);
+    }
+};
+function _typeAnsPress() {
+    if (window.event.keyCode === 13) {
+        py.link("ansHack");
+    }
+}
+</script>
+</body>
+</html>
